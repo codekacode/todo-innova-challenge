@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { TrelloService } from 'src/app/services/trello.service';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  Title = "Trello";
-  trello = []
-  constructor() { }
+  title = "Trello";
+  trello: any[] = []
+
+  constructor(private _router: Router, private _trelloService: TrelloService) { }
 
   ngOnInit(): void {
+    this.trello = this._trelloService.trello
   }
 
 }
