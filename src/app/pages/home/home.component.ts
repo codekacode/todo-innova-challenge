@@ -19,4 +19,8 @@ export class HomeComponent implements OnInit {
     this.trello = this._trelloService.trello
   }
 
+  clickBoard(id: Number){
+    this._router.navigate(['/board', id])
+  }
+
 }

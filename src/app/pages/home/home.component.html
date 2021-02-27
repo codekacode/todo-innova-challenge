@@ -1,10 +1,10 @@
 <h2>{{ title }}</h2>
 
 <div class="boards">
-  <div class="board">
-    <p>board title</p>
+  <div class="board" *ngFor="let board of trello">
+    <p>{{board.name}}</p>
     <ul class="user">
-      <li>user</li>
+      <li *ngFor="let user of board.users">{{user.name}}</li>
     </ul>
   </div>
 </div>
