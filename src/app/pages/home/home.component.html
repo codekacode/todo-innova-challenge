@@ -1,7 +1,7 @@
 <h2>{{ title }}</h2>
 
 <div class="boards">
-  <div class="board" *ngFor="let board of trello">
+  <div class="board" *ngFor="let board of trello" (click)="clickBoard(board.id)">
     <p>{{board.name}}</p>
     <ul class="user">
       <li *ngFor="let user of board.users">{{user.name}}</li>
