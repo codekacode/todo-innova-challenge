@@ -17,10 +17,12 @@
     <ul>
       <li *ngFor="let comment of params.comments">
         {{comment.name}} - {{comment.comment}}
+
+        <img [src]="comment.image" alt="">
       </li>
     </ul>
 
-    <form action="">
+    <form (ngSubmit)="saveComment()"  [formGroup]="formComment">
       <div>
         <input type="text"formControlName="comment"/>
       </div>

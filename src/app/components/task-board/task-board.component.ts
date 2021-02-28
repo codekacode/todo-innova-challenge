@@ -16,6 +16,7 @@ export class TaskBoardComponent implements OnInit {
   destroy = true;
 
   formCard:any;
+  formComment: any;
   params:any;
 
   constructor(private __trelloService:TrelloService, private formBuilder:FormBuilder) { }
@@ -26,6 +27,11 @@ export class TaskBoardComponent implements OnInit {
     this.formCard = this.formBuilder.group({
       'title':[this.params.title ,Validators.required],
       'description':[this.params.description ,Validators.required]
+    })
+
+    this.formComment = this.formBuilder.group({
+      'comment':["" ,Validators.required],
+      'name':["Codecode",Validators.required],
     })
   }
 
@@ -40,5 +46,10 @@ export class TaskBoardComponent implements OnInit {
     let {title, description} = this.formCard.value;
     this.params.title = title;
     this.params.description = description;
+  }
+
+  saveComment(){
+    this.params.comments.push(this.formComment.value)
+    this.formComment.reset()
   }
 }

@@ -60,7 +60,7 @@ export class TrelloService {
               description: "Type description here",
               labels: ["Home", "Hacer", "Now"],
               comments:[
-                {name: "Lila", comment:"Lorem Ipsum simply dummy text"}
+                {name: "Lila", comment:"Lorem Ipsum simply dummy text", image: "https://res.cloudinary.com/codeable/image/upload/v1614458231/trello-avatars/avatar-1_i7fc6i.png"}
               ]
             },
             {
