@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { TrelloService } from './services/trello.service';
 import { DetailBoardsComponent } from './pages/detail-boards/detail-boards.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgxModalModule } from 'ngx-easy-modal';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]
