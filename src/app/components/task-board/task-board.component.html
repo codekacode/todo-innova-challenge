@@ -4,14 +4,30 @@
       <input type="text" formControlName="title" />
     </div>
     <div>
-      <label for="">Description</label>
+      <h4>Description</h4>
       <input type="text" name="" id="" formControlName="description" />
     </div>
     <div>
       <button>Update</button>
     </div>
   </form>
-</div>
 
-<p>{{params | json}}</p>
-<button (click)="close()">Close</button>
+  <div>
+    <h4>Comments</h4>
+    <ul>
+      <li>
+        comment
+      </li>
+    </ul>
+
+    <form action="">
+      <div>
+        <input type="text"formControlName="comment"/>
+      </div>
+      <div>
+        <button>Comment</button>
+      </div>
+    </form>
+  </div>
+  <button (click)="close()">Close</button>
+</div>
