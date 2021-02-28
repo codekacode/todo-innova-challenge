@@ -1,5 +1,5 @@
 <p>{{board.name}}</p>
-<form>
+<form (ngSubmit)="saveUser()" [formGroup]="formUser">
   <div>
       <label for="">Name:</label>
       <input type="text" formControlName="name">
@@ -9,7 +9,7 @@
       <input type="text" formControlName="alias">
   </div>
   <div>
-      <button>crear!!</button>
+      <button>Crear</button>
   </div>
 </form>
 <div>

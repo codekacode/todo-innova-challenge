@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+
 import { TrelloService } from 'src/app/services/trello.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class DetailBoardsComponent implements OnInit {
   board:any= {};
 
   formUser = new FormGroup({
-    name: new FormControl("",[Validators.required,]),
+    name: new FormControl("",[Validators.required]),
     alias: new FormControl(),
   });
 
@@ -25,4 +26,12 @@ export class DetailBoardsComponent implements OnInit {
     console.log(this.board)
   }
 
+  saveUser(){
+    if(this.formUser.valid){
+      this.board.users.push(this.formUser.value);
+      this.formUser.reset();
+    } else{
+      alert("This can't be blanck");
+    }
+  }
 }
