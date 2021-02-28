@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { TrelloService } from 'src/app/services/trello.service';
 
@@ -9,7 +10,12 @@ import { TrelloService } from 'src/app/services/trello.service';
 })
 export class DetailBoardsComponent implements OnInit {
 
-  board:any= {}
+  board:any= {};
+
+  formUser = new FormGroup({
+    name: new FormControl("",[Validators.required,]),
+    alias: new FormControl(),
+  });
 
   constructor(private _trelloService:TrelloService, private _routerActive:ActivatedRoute) { }
 
