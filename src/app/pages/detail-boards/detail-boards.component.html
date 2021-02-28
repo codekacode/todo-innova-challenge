@@ -20,7 +20,10 @@
 <div>
   <ul *ngFor="let list of board.list">
     <p>{{list.type}}</p>
-    <li *ngFor="let item of list.items" style="cursor: pointer;">{{item.title}}Hola</li>
+    <li *ngFor="let item of list.items"
+          style="cursor: pointer;"
+          (click)="open()">
+          {{item.title}}Hola
+        </li>
   </ul>
 </div>
-<button (click)="open()">Abre</button>
