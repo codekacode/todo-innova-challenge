@@ -55,6 +55,7 @@ export class TrelloService {
         {
           type: "ToDo", items: [
             {
+              id: 1,
               title: "Add social networks",
               description: "Type description here",
               labels: ["Home", "Hacer", "Now"],

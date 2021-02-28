@@ -14,8 +14,7 @@ export class DetailBoardsComponent implements OnInit {
   board:any= {};
 
   formUser = new FormGroup({
-    name: new FormControl("",[Validators.required]),
-    alias: new FormControl(),
+    email: new FormControl("",[Validators.required]),
   });
 
   constructor(private _trelloService:TrelloService, private _routerActive:ActivatedRoute) { }
