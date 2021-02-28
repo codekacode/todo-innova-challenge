@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { TrelloService } from 'src/app/services/trello.service';
 
 @Component({
   selector: 'app-detail-boards',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailBoardsComponent implements OnInit {
 
-  constructor() { }
+  board:any= {}
+
+  constructor(private _trelloService:TrelloService, private _routerActive:ActivatedRoute) { }
 
   ngOnInit(): void {
+    let id = this._routerActive.snapshot.params.id
+    this.board = this._trelloService.trello.find(board => board.id == id)
+    console.log(this.board)
   }
 
 }
