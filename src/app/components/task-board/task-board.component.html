@@ -1,5 +1,5 @@
 <div class="modal-tasks">
-  <form [formGroup]="formCard">
+  <form (ngSubmit)="saveTask()" [formGroup]="formCard">
     <div>
       <input type="text" formControlName="title" />
     </div>
@@ -15,8 +15,8 @@
   <div>
     <h4>Comments</h4>
     <ul>
-      <li>
-        comment
+      <li *ngFor="let comment of params.comments">
+        {{comment.name}} - {{comment.comment}}
       </li>
     </ul>
 

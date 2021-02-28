@@ -29,7 +29,7 @@ export class TrelloService {
               description: "Type description here 2",
               labels: ["Home", "Hacer", "Now"],
               comments:[
-                {name: "Ed", comment:"Lorem Ipsum simply dummy text"}
+                {name: "Lili", comment:"Lorem Ipsum simply dummy text"}
               ]
             },
             {
@@ -37,7 +37,7 @@ export class TrelloService {
               description: "Type description here 3",
               labels: ["Home", "Hacer", "Now"],
               comments:[
-                {name: "Ed", comment:"Lorem Ipsum simply dummy text"}
+                {name: "Mike", comment:"Lorem Ipsum simply dummy text"}
               ]
             }
           ]
@@ -60,7 +60,7 @@ export class TrelloService {
               description: "Type description here",
               labels: ["Home", "Hacer", "Now"],
               comments:[
-                {name: "Ed", comment:"Lorem Ipsum simply dummy text"}
+                {name: "Lila", comment:"Lorem Ipsum simply dummy text"}
               ]
             },
             {
@@ -68,7 +68,7 @@ export class TrelloService {
               description: "Type description here",
               labels: ["Home", "Hacer", "Now"],
               comments:[
-                {name: "Ed", comment:"Lorem Ipsum simply dummy text"}
+                {name: "Edu", comment:"Lorem Ipsum simply dummy text"}
               ]
             },
             {
@@ -76,7 +76,7 @@ export class TrelloService {
               description: "Type description here",
               labels: ["Home", "Hacer", "Now"],
               comments:[
-                {name: "Ed", comment:"Lorem Ipsum simply dummy text"}
+                {name: "Juan", comment:"Lorem Ipsum simply dummy text"}
               ]
             }
           ]

@@ -15,8 +15,8 @@ export class TaskBoardComponent implements OnInit {
   paramValue:any;
   destroy = true;
 
-  formCard:any
-  params:any
+  formCard:any;
+  params:any;
 
   constructor(private __trelloService:TrelloService, private formBuilder:FormBuilder) { }
 
@@ -34,5 +34,11 @@ export class TaskBoardComponent implements OnInit {
     if(this.destroy){
       this.modal.destroy();
     }
+  }
+
+  saveTask(){
+    let {title, description} = this.formCard.value;
+    this.params.title = title;
+    this.params.description = description;
   }
 }
