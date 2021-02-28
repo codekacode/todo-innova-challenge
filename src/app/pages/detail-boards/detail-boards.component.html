@@ -21,9 +21,9 @@
   <ul *ngFor="let list of board.list">
     <p>{{list.type}}</p>
     <li *ngFor="let item of list.items"
-          style="cursor: pointer;"
-          (click)="open()">
-          {{item.title}}Hola
-        </li>
+        style="cursor: pointer;"
+        (click)="open(item)">
+      {{item.title}}Hola
+    </li>
   </ul>
 </div>

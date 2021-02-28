@@ -36,8 +36,8 @@ export class DetailBoardsComponent implements OnInit {
     }
   }
 
-  open(){
-    const params = {id:1};
+  open(item:any){
+    const params = item;
     this._trelloService.paramsModal = params;
     this.modalService.create(TaskBoardComponent, params).then((modal: any) => {
       modal.open();

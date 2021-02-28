@@ -11,15 +11,22 @@ import { TrelloService } from 'src/app/services/trello.service';
 export class TaskBoardComponent implements OnInit {
 
   modal: any;
-  
+
   paramValue:any;
   destroy = true;
+
+  formCard:any
   params:any
 
-  constructor(private __trelloService:TrelloService) { }
+  constructor(private __trelloService:TrelloService, private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
     this.params = this.__trelloService.paramsModal;
+
+    this.formCard = this.formBuilder.group({
+      'title':[this.params.title ,Validators.required],
+      'description':[this.params.description ,Validators.required]
+    })
   }
 
   close(){

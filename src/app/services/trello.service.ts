@@ -26,7 +26,7 @@ export class TrelloService {
             },
             {
               title: "What are you lookin for",
-              description: "Type description here",
+              description: "Type description here 2",
               labels: ["Home", "Hacer", "Now"],
               comments:[
                 {name: "Ed", comment:"Lorem Ipsum simply dummy text"}
@@ -34,7 +34,7 @@ export class TrelloService {
             },
             {
               title: "You still here, leave!!",
-              description: "Type description here",
+              description: "Type description here 3",
               labels: ["Home", "Hacer", "Now"],
               comments:[
                 {name: "Ed", comment:"Lorem Ipsum simply dummy text"}

@@ -1,11 +1,11 @@
 <div class="modal-tasks">
-  <form action="">
+  <form [formGroup]="formCard">
     <div>
       <input type="text" formControlName="title" />
     </div>
     <div>
       <h4>Description</h4>
-      <input type="text" name="" id="" formControlName="description" />
+      <input type="text" name="" formControlName="description" />
     </div>
     <div>
       <button>Update</button>
