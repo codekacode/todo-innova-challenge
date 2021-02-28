@@ -8,12 +8,14 @@ import { TrelloService } from './services/trello.service';
 import { DetailBoardsComponent } from './pages/detail-boards/detail-boards.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxModalModule } from 'ngx-easy-modal';
+import { TaskBoardComponent } from './components/task-board/task-board.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DetailBoardsComponent
+    DetailBoardsComponent,
+    TaskBoardComponent
   ],
   imports: [
     BrowserModule,

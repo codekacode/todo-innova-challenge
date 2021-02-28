@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-
+import { NgxModalService } from 'ngx-easy-modal';
+import { TaskBoardComponent } from 'src/app/components/task-board/task-board.component';
 import { TrelloService } from 'src/app/services/trello.service';
+
 
 @Component({
   selector: 'app-detail-boards',
@@ -17,7 +19,7 @@ export class DetailBoardsComponent implements OnInit {
     email: new FormControl("",[Validators.required]),
   });
 
-  constructor(private _trelloService:TrelloService, private _routerActive:ActivatedRoute) { }
+  constructor(private _trelloService:TrelloService, private _routerActive:ActivatedRoute, private modalService: NgxModalService) { }
 
   ngOnInit(): void {
     let id = this._routerActive.snapshot.params.id
@@ -32,5 +34,14 @@ export class DetailBoardsComponent implements OnInit {
     } else{
       alert("This can't be blanck");
     }
+  }
+
+  open(){
+    const params = {id:1};
+    this._trelloService.paramsModal = params;
+    this.modalService.create(TaskBoardComponent, params).then((modal: any) => {
+      modal.open();
+    });
+
   }
 }
