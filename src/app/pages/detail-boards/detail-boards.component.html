@@ -12,10 +12,15 @@
   <h5>Users:</h5>
   <ul>
     <li *ngFor="let user of board.users" >
-      {{user.name}}
+      {{user.name}} image should be here!
     </li>
   </ul>
 </div>
 
-
+<div>
+  <ul *ngFor="let list of board.list">
+    <p>{{list.type}}</p>
+    <li *ngFor="let item of list.items" style="cursor: pointer;">{{item.title}}Hola</li>
+  </ul>
+</div>
 <button (click)="open()">Abre</button>

@@ -11,10 +11,11 @@ import { TrelloService } from 'src/app/services/trello.service';
 export class TaskBoardComponent implements OnInit {
 
   modal: any;
+  
   paramValue:any;
   destroy = true;
-
   params:any
+
   constructor(private __trelloService:TrelloService) { }
 
   ngOnInit(): void {
