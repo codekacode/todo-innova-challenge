@@ -1,0 +1,21 @@
+
+.title-board{
+  font-size: 30px;
+  font-weight: bold;
+  color: #DBDBDB;
+  margin: 0;
+}
+
+.boards{
+  display:flex;
+  gap: 20px;
+}
+
+.board{
+  background-color: #fff;
+  min-width: 155px;
+  max-height: 152px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius:10px;
+}

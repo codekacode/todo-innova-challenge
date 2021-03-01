@@ -1,29 +1,27 @@
-<p>{{board.name}}</p>
+<p class="title">{{board.name}}</p>
+
 <form (ngSubmit)="saveUser()" [formGroup]="formUser">
-  <div>
-      <label for="">Email:</label>
-      <input type="email" formControlName="email">
-  </div>
-  <div>
-      <button>Send Invitation</button>
+  <div class="form-create-user">
+    <input type="email" formControlName="email" placeholder="yefrioscar9814@gmail.com" class="input-add">
+    <button class="btn-send">Send Invitation</button>
   </div>
 </form>
 <div>
-  <h5>Users:</h5>
   <ul>
     <li *ngFor="let user of board.users" >
-      {{user.name}} image should be here!
+      <img [src]="user.image" alt="">
     </li>
   </ul>
 </div>
 
-<div>
-  <ul *ngFor="let list of board.list">
-    <p>{{list.type}}</p>
+<div >
+  <ul *ngFor="let list of board.list" class="board-detail-list">
+    <p class="title-type">{{list.type}}</p>
     <li *ngFor="let item of list.items"
         style="cursor: pointer;"
-        (click)="open(item)">
-      {{item.title}}Hola
+        (click)="open(item)"
+        class="list-task">
+      {{item.title}}
     </li>
   </ul>
 </div>

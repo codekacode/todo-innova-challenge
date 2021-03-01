@@ -9,13 +9,15 @@ import { DetailBoardsComponent } from './pages/detail-boards/detail-boards.compo
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxModalModule } from 'ngx-easy-modal';
 import { TaskBoardComponent } from './components/task-board/task-board.component';
+import { CreateUserComponent } from './components/create-user/create-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     DetailBoardsComponent,
-    TaskBoardComponent
+    TaskBoardComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,

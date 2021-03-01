@@ -1,10 +1,11 @@
-<h2>{{ title }}</h2>
+
+<h2 class="title">{{ title }}</h2>
 
 <div class="boards">
   <div class="board" *ngFor="let board of trello" (click)="clickBoard(board.id)">
-    <p>{{board.name}}</p>
-    <ul class="user">
-      <li *ngFor="let user of board.users">{{user.name}}</li>
+    <p class="title-board">{{board.name}}</p>
+    <ul class="user-board">
+      <li *ngFor="let user of board.users"><img [src]="user.image" alt=""></li>
     </ul>
   </div>
 </div>

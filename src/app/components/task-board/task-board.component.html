@@ -1,11 +1,12 @@
-<div class="modal-tasks">
+<div class="modal-task">
+  <button (click)="close()">X</button>
   <form (ngSubmit)="saveTask()" [formGroup]="formCard">
     <div>
-      <input type="text" formControlName="title" />
+      <input type="text" formControlName="title" class="input-add"/>
     </div>
     <div>
       <h4>Description</h4>
-      <input type="text" name="" formControlName="description" />
+      <input type="text" name="" formControlName="description" class="input-add" />
     </div>
     <div>
       <button>Update</button>
@@ -14,22 +15,20 @@
 
   <div>
     <h4>Comments</h4>
-    <ul>
+    <ul class="comments-list">
       <li *ngFor="let comment of params.comments">
-        {{comment.name}} - {{comment.comment}}
-
         <img [src]="comment.image" alt="">
+         {{comment.comment}}
       </li>
     </ul>
 
     <form (ngSubmit)="saveComment()"  [formGroup]="formComment">
       <div>
-        <input type="text"formControlName="comment"/>
+        <input type="text"formControlName="comment" class="input-add input-comment"/>
       </div>
       <div>
         <button>Comment</button>
       </div>
     </form>
   </div>
-  <button (click)="close()">Close</button>
 </div>
