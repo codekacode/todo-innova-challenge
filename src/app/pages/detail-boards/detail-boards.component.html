@@ -1,22 +1,20 @@
 <p class="title">{{board.name}}</p>
+<p (click)="createUser()">add contact</p>
 
-<form (ngSubmit)="saveUser()" [formGroup]="formUser">
-  <div class="form-create-user">
-    <input type="email" formControlName="email" placeholder="yefrioscar9814@gmail.com" class="input-add">
-    <button class="btn-send">Send Invitation</button>
-  </div>
-</form>
 <div>
   <ul>
     <li *ngFor="let user of board.users" >
       <img [src]="user.image" alt="">
+      <!-- <img [src]="imageDefault"> -->
+
     </li>
   </ul>
 </div>
 
-<div >
+<div class="todo-main">
+  <button class="btn-create-todo" (click)="createTodo()">+</button>
   <ul *ngFor="let list of board.list" class="board-detail-list">
-    <p class="title-type">{{list.type}}</p>
+    <p class="title-type">{{list.title}}</p>
     <li *ngFor="let item of list.items"
         style="cursor: pointer;"
         (click)="open(item)"

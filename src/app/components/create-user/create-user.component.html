@@ -1,1 +1,9 @@
-<p>create-user works!</p>
+<div class="modal-task">
+  <form (ngSubmit)="saveUser()" [formGroup]="formUser">
+    <div class="form-create-user">
+      <input type="email" formControlName="email" placeholder="yefrioscar9814@gmail.com" class="input-add">
+      <button class="btn-send">Send Invitation</button>
+    </div>
+  </form>
+  <button (click)="close()">X</button>
+</div>

@@ -17,18 +17,15 @@
 /* DETAIL BOARD*/
 
 .board-detail-list{
+  margin: 0;
   background-color: #fff;
-  max-width:200px;
+  min-width:150px;
   height: 400px;
   flex-direction: column;
   border-radius: 8px;
-}
-
-.title-type{
-  color: #DBDBDB;
+  color: grey;
   font-weight: bold;
 }
-
 .list-task{
   border: 1px solid #EDEDED;
   border-radius: 5px;
@@ -37,3 +34,21 @@
   color: #575757;
   font-size:14px;
 }
+
+.todo-main{
+  display:flex;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.btn-create-todo{
+  height: 100px;
+  width: 30px;
+  background-color: #97E7ED;
+  border-radius: 8px;
+  border: 1px solid #97E7ED;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+}
+

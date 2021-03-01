@@ -1,0 +1,8 @@
+<div class="modal-task">
+  <form (ngSubmit)="saveTodo()" [formGroup]="formTodo">
+    <div class="form-create-user">
+      <input type="text" formControlName="title"  class="input-add">
+      <button class="btn-send">Create List</button>
+    </div>
+  </form>
+</div>

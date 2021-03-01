@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgxModalModule } from 'ngx-easy-modal';
 import { TaskBoardComponent } from './components/task-board/task-board.component';
 import { CreateUserComponent } from './components/create-user/create-user.component';
+import { CreateTodoComponent } from './components/create-todo/create-todo.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CreateUserComponent } from './components/create-user/create-user.compon
     HomeComponent,
     DetailBoardsComponent,
     TaskBoardComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    CreateTodoComponent
   ],
   imports: [
     BrowserModule,

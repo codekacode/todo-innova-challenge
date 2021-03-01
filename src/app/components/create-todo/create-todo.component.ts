@@ -1,29 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NgxModal } from 'ngx-easy-modal';
 import { TrelloService } from 'src/app/services/trello.service';
 
-
 @Component({
-  selector: 'app-create-user',
-  templateUrl: './create-user.component.html',
-  styleUrls: ['./create-user.component.css']
+  selector: 'app-create-todo',
+  templateUrl: './create-todo.component.html',
+  styleUrls: ['./create-todo.component.css']
 })
-export class CreateUserComponent implements OnInit {
+export class CreateTodoComponent implements OnInit {
+
   modal: any;
   board:any= {};
   paramValue:any;
   destroy = true;
 
-  formCard:any;
-  formComment: any;
   params:any;
-  imageDefault:String = "https://res.cloudinary.com/codeable/image/upload/v1614550034/trello-avatars/avatar-3_fwvhhl.png";
 
-  formUser = new FormGroup({
-    email: new FormControl("",[Validators.required]),
-    image: new FormControl(this.imageDefault)
-
+  formTodo = new FormGroup({
+    title: new FormControl("",[Validators.required]),
   });
 
   constructor(private __trelloService:TrelloService, private formBuilder:FormBuilder) { }
@@ -32,15 +26,14 @@ export class CreateUserComponent implements OnInit {
     this.board = this.__trelloService.trello.find((board) => board.id == this.__trelloService.currentBoard)
   }
 
-  saveUser(){
-    if(this.formUser.valid){
-      this.board.users.push(this.formUser.value);
-      this.formUser.reset();
+  saveTodo(){
+    if(this.formTodo.valid){
+      this.board.list.push(this.formTodo.value);
+      this.formTodo.reset();
       this.close();
     } else{
       alert("This can't be blanck");
     }
-    console.log(this.formUser.value)
   }
 
   close(){
@@ -50,3 +43,4 @@ export class CreateUserComponent implements OnInit {
     }
   }
 }
+

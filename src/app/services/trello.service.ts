@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class TrelloService {
   paramsModal = {};
+  currentBoard = 0;
   trello = [
     {
       "id": 1,
@@ -16,10 +17,10 @@ export class TrelloService {
       ],
       "list": [
         {
-          type: "ToDo", items: [
+          title: "ToDo", items: [
             {
               title: "Add social networks",
-              description: "Type description here",
+              description: "title description here",
               labels: ["Home", "Hacer", "Now"],
               comments:[
                 {name: "Lila", comment:"Lorem Ipsum simply dummy text", image: "https://res.cloudinary.com/codeable/image/upload/v1614554516/trello-avatars/avatar-6_zgwbap.png"},
@@ -29,7 +30,7 @@ export class TrelloService {
             },
             {
               title: "What are you lookin for",
-              description: "Type description here 2",
+              description: "title description here 2",
               labels: ["Home", "Hacer", "Now"],
               comments:[
                 {name: "Lili", comment:"Lorem Ipsum simply dummy text"}
@@ -37,7 +38,7 @@ export class TrelloService {
             },
             {
               title: "You still here, leave!!",
-              description: "Type description here 3",
+              description: "title description here 3",
               labels: ["Home", "Hacer", "Now"],
               comments:[
                 {name: "Mike", comment:"Lorem Ipsum simply dummy text"}
@@ -56,11 +57,11 @@ export class TrelloService {
       ],
       "list": [
         {
-          type: "ToDo", items: [
+          title: "ToDo", items: [
             {
               id: 1,
               title: "Add social networks",
-              description: "Type description here",
+              description: "title description here",
               labels: ["Home", "Hacer", "Now"],
               comments:[
                 {name: "Lila", comment:"Lorem Ipsum simply dummy text", image: "https://res.cloudinary.com/codeable/image/upload/v1614554516/trello-avatars/avatar-6_zgwbap.png"},
@@ -70,7 +71,7 @@ export class TrelloService {
             },
             {
               title: "What are you lookin for",
-              description: "Type description here",
+              description: "title description here",
               labels: ["Home", "Hacer", "Now"],
               comments:[
                 {name: "Edu", comment:"Lorem Ipsum simply dummy text"}
@@ -78,7 +79,38 @@ export class TrelloService {
             },
             {
               title: "You still here, leave!!",
-              description: "Type description here",
+              description: "title description here",
+              labels: ["Home", "Hacer", "Now"],
+              comments:[
+                {name: "Juan", comment:"Lorem Ipsum simply dummy text"}
+              ]
+            }
+          ]
+        },
+        {
+          title: "ToDo", items: [
+            {
+              id: 1,
+              title: "Add social networks",
+              description: "title description here",
+              labels: ["Home", "Hacer", "Now"],
+              comments:[
+                {name: "Lila", comment:"Lorem Ipsum simply dummy text", image: "https://res.cloudinary.com/codeable/image/upload/v1614554516/trello-avatars/avatar-6_zgwbap.png"},
+                {name: "Lila", comment:"Lorem Ipsum simply dummy text", image: "https://res.cloudinary.com/codeable/image/upload/v1614550034/trello-avatars/avatar-3_fwvhhl.png"},
+                {name: "Lila", comment:"Lorem Ipsum simply dummy text", image: "https://res.cloudinary.com/codeable/image/upload/v1614550033/trello-avatars/avatar-2_due10r.png"}
+              ]
+            },
+            {
+              title: "What are you lookin for",
+              description: "title description here",
+              labels: ["Home", "Hacer", "Now"],
+              comments:[
+                {name: "Edu", comment:"Lorem Ipsum simply dummy text"}
+              ]
+            },
+            {
+              title: "You still here, leave!!",
+              description: "title description here",
               labels: ["Home", "Hacer", "Now"],
               comments:[
                 {name: "Juan", comment:"Lorem Ipsum simply dummy text"}
@@ -97,11 +129,11 @@ export class TrelloService {
       ],
       "list": [
         {
-          type: "ToDo", items: [
+          title: "ToDo", items: [
             {
               id: 1,
               title: "Add social networks",
-              description: "Type description here",
+              description: "title description here",
               labels: ["Home", "Hacer", "Now"],
               comments:[
                 {name: "Lila", comment:"Lorem Ipsum simply dummy text", image: "https://res.cloudinary.com/codeable/image/upload/v1614554516/trello-avatars/avatar-6_zgwbap.png"},
@@ -111,7 +143,7 @@ export class TrelloService {
             },
             {
               title: "What are you lookin for",
-              description: "Type description here",
+              description: "title description here",
               labels: ["Home", "Hacer", "Now"],
               comments:[
                 {name: "Edu", comment:"Lorem Ipsum simply dummy text"}
@@ -119,7 +151,38 @@ export class TrelloService {
             },
             {
               title: "You still here, leave!!",
-              description: "Type description here",
+              description: "title description here",
+              labels: ["Home", "Hacer", "Now"],
+              comments:[
+                {name: "Juan", comment:"Lorem Ipsum simply dummy text"}
+              ]
+            }
+          ]
+        },
+        {
+          title: "ToDo", items: [
+            {
+              id: 1,
+              title: "Add social networks",
+              description: "title description here",
+              labels: ["Home", "Hacer", "Now"],
+              comments:[
+                {name: "Lila", comment:"Lorem Ipsum simply dummy text", image: "https://res.cloudinary.com/codeable/image/upload/v1614554516/trello-avatars/avatar-6_zgwbap.png"},
+                {name: "Lila", comment:"Lorem Ipsum simply dummy text", image: "https://res.cloudinary.com/codeable/image/upload/v1614550034/trello-avatars/avatar-3_fwvhhl.png"},
+                {name: "Lila", comment:"Lorem Ipsum simply dummy text", image: "https://res.cloudinary.com/codeable/image/upload/v1614550033/trello-avatars/avatar-2_due10r.png"}
+              ]
+            },
+            {
+              title: "What are you lookin for",
+              description: "title description here",
+              labels: ["Home", "Hacer", "Now"],
+              comments:[
+                {name: "Edu", comment:"Lorem Ipsum simply dummy text"}
+              ]
+            },
+            {
+              title: "You still here, leave!!",
+              description: "title description here",
               labels: ["Home", "Hacer", "Now"],
               comments:[
                 {name: "Juan", comment:"Lorem Ipsum simply dummy text"}
@@ -136,5 +199,12 @@ export class TrelloService {
 
 
 
-  constructor() { }
+  constructor( ) {
+    let board = localStorage.getItem("currentBoard");
+    console.log(board);
+    if(board){
+      this.currentBoard = +board;
+    };
+    // this.currentBoard = localStorage.getItem("currenBoard") ? +localStorage.getItem("currenBoard") : 0;
+  }
 }
