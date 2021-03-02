@@ -1,25 +1,12 @@
-.form-create-user{
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  gap: 5px;
+.title-type{
+  margin: 0 auto;
 }
-
-
-.btn-send{
-  background-color: grey;
-  height:40px;
-  border: 1px solid grey;
-  border-radius: 5px;
-  color: white;
-  font-weight: bold;
-}
-/* DETAIL BOARD*/
-
 .board-detail-list{
   margin: 0;
+  padding: 0;
+  padding-top: 15px;
   background-color: #fff;
-  min-width:150px;
+  min-width:200px;
   height: 400px;
   flex-direction: column;
   border-radius: 8px;
@@ -33,17 +20,21 @@
   background-color: #EDEDED;
   color: #575757;
   font-size:14px;
+  left: 15px;
+  max-width: 150px;
 }
+
+
 
 .todo-main{
   display:flex;
-  gap: 10px;
+  gap: 5px;
   padding: 10px 0;
 }
 
 .btn-create-todo{
-  height: 100px;
-  width: 30px;
+  height: 130px;
+  width: 40px;
   background-color: #97E7ED;
   border-radius: 8px;
   border: 1px solid #97E7ED;
@@ -52,3 +43,23 @@
   font-weight: bold;
 }
 
+.todo-users{
+  display:flex;
+  align-items:center;
+}
+.btn-create-user{
+  margin-top: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius:50%;
+  color: #fff;
+  background-color: #598AB9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.btn-new-card{
+  text-align: center;
+}

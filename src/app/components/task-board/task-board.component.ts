@@ -30,8 +30,8 @@ export class TaskBoardComponent implements OnInit {
     })
 
     this.formComment = this.formBuilder.group({
-      'comment':["" ,Validators.required],
-      'name':["Codecode",Validators.required],
+      'comment':[""],
+      'name':["Codeka",Validators.required],
     })
   }
 
@@ -40,6 +40,8 @@ export class TaskBoardComponent implements OnInit {
     if(this.destroy){
       this.modal.destroy();
     }
+    this.saveTask();
+    this.saveComment();
   }
 
   saveTask(){

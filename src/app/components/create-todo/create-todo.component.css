@@ -1,0 +1,24 @@
+.modal-task{
+  min-width: 250px;
+  background: #fff;
+  padding: 20px;
+
+}
+
+.form-create-user{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 5px;
+}
+
+
+.btn-send{
+  background-color: #4D2DD9;
+  height:40px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+
+}

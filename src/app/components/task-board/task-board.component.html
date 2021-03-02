@@ -1,34 +1,36 @@
-<div class="modal-task">
-  <button (click)="close()">X</button>
-  <form (ngSubmit)="saveTask()" [formGroup]="formCard">
-    <div>
-      <input type="text" formControlName="title" class="input-add"/>
-    </div>
-    <div>
-      <h4>Description</h4>
-      <input type="text" name="" formControlName="description" class="input-add" />
-    </div>
-    <div>
-      <button>Update</button>
-    </div>
-  </form>
-
-  <div>
-    <h4>Comments</h4>
-    <ul class="comments-list">
-      <li *ngFor="let comment of params.comments">
-        <img [src]="comment.image" alt="">
-         {{comment.comment}}
-      </li>
-    </ul>
-
-    <form (ngSubmit)="saveComment()"  [formGroup]="formComment">
+<div class="modal-task overlay" id="popup1">
+  <div class="popup">
+    <button (click)="close()" class="btn-close">X</button>
+    <form (ngSubmit)="saveTask()" [formGroup]="formCard">
       <div>
-        <input type="text"formControlName="comment" class="input-add input-comment"/>
+        <input type="text" formControlName="title" class="input-add task"/>
       </div>
       <div>
-        <button>Comment</button>
+        <h4>Description</h4>
+        <input type="text"
+              formControlName="description"
+              class="input-add task"
+              placeholder="Type the description here..."/>
       </div>
     </form>
+
+    <div>
+      <h4>Comments</h4>
+      <ul class="comments-list">
+        <li *ngFor="let comment of params.comments">
+          <img [src]="comment.image" alt="">
+          {{comment.comment}}
+        </li>
+      </ul>
+
+      <form (ngSubmit)="saveComment()"  [formGroup]="formComment">
+        <div>
+          <input type="text"
+                formControlName="comment"
+                class="input-add input-comment"/>
+        </div>
+      </form>
+    </div>
   </div>
+
 </div>

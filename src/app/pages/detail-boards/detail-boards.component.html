@@ -1,7 +1,9 @@
 <p class="title">{{board.name}}</p>
-<p (click)="createUser()">add contact</p>
 
-<div>
+<div class="todo-users">
+  <div (click)="createUser()" class="btn-create-user">
+    <div>+</div>
+</div>
   <ul>
     <li *ngFor="let user of board.users" >
       <img [src]="user.image" alt="">
@@ -13,13 +15,17 @@
 
 <div class="todo-main">
   <button class="btn-create-todo" (click)="createTodo()">+</button>
+  <div></div>
   <ul *ngFor="let list of board.list" class="board-detail-list">
     <p class="title-type">{{list.title}}</p>
     <li *ngFor="let item of list.items"
         style="cursor: pointer;"
         (click)="open(item)"
-        class="list-task">
+        class="list-task"
+        href="#popup1">
       {{item.title}}
     </li>
+    <a class="btn-new-card">+ Add new card</a>
   </ul>
+
 </div>

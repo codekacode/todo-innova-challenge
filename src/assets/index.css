@@ -7,6 +7,16 @@ body{
   padding: 10px;
 }
 
+nav{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+p{
+  margin: 0;
+}
+
 li img {
   width: 30px;
   border-radius: 50%;
@@ -37,4 +47,33 @@ li {
   border: 1px solid #EDEDED;
   background-color: #EDEDED;
   margin: 5px
+}
+
+.icon-antena{
+  display: flex;
+  gap: 5px;
+}
+
+.icon1{
+  width: 10px;
+  height: 40px;
+  background-color:#fff;
+  border-radius: 5px;
+}
+.icon2{
+  width: 10px;
+  height: 30px;
+  background-color:#fff;
+  border-radius: 5px;
+  margin-top:10px;
+}
+
+.current-user{
+  width: 40px;
+  height: 40px;
+  border-radius:50% ;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content:center;
 }
